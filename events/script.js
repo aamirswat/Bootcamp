@@ -24,10 +24,16 @@ function showSucess(input){
     formControl.className='form-control success'
 }
 
+//validate email
+function validateEmail(email) {
+const re=/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+return re.test(String(email).toLocaleLowerCase());
+}
+
+
 // create event listner for submit button
 form.addEventListener('submit', function(e){
-    e.preventDefault();
-   
+    e.preventDefault();   
     //check if username is empty
     if(username.value==""){
     showError(username,'username is require');
@@ -37,7 +43,11 @@ form.addEventListener('submit', function(e){
     //check if email is empty
    if(email.value==""){
     showError(email,'email is require');
-   }else{
+   }
+   else if(!validateEmail(email.value)){
+       showError(email,'email is invalid');
+   }
+   else{
        showSucess(email);
    }
    
