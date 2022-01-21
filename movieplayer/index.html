@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="progress.css">
+    <script src="https://kit.fontawesome.com/05fdf2eb19.js" crossorigin="anonymous"></script>
+    <title>Video Player</title>
+</head>
+<body>
+<h1>Custome Video Player</h1>
+<!-- this is the video player . poster attributes gives the thumbnail and src gice location-->
+<video src="videos/tech.mp4" id="video" class="screen" poster="images/tech.png"></video>
+ <!--Adding custom controls for the video player-->
+ <div class="controls">
+     <button id="play" class="btn">
+         <i class="fa fa-play fa-2x"></i>
+     </button>
+     <button id="stop" class="btn">
+        <i class="fa fa-stop fa-2x"></i>
+     </button>
+     
+     <input type="range" class="progress" id="progress" min="0" max="100" step="0.1" value="0" />
+ <span class="timestamp" id="timestamp">00:00</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
