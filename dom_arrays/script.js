@@ -61,7 +61,6 @@ function totalBalance(){
  balanceElement.innerHTML=`<h3>Total Balance : ${formatNumberToDoller(balance)}</h3>`;
  //appned balance in main element
  main.appendChild(balanceElement); 
-
 }
 //function to double Money of All Users
 function doubleMoney(){
