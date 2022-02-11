@@ -11,6 +11,7 @@
 <h1>Hangman</h1>
 <p>Find the hidden word - guess a letter by entring it on your keyboard</p>
 <div class="game-container">
+    <!--this is the svg containing the platform and the hangman -->
     <svg height="250" width="250" class="figure-container">
         <!-- this is the hanging place -->
         <line x1="60" y1="20" x2="140" y2="20" />
@@ -18,8 +19,39 @@
         <line x1="60" y1="20" x2="60" y2="230"/>
         <line x1="30" y1="230" x2="90" y2="230"/>
         <!-- this is the hanging place -->
-    </svg>
+        <circle cx="140" cy="70" r="20" class="figure-part" />
+        <!--this is the body-->
+        <line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
+        <!--these are the arms-->
+        <line x1="140" y1="102" x2="120" y2="150" class="figure-part" />
+        <line x1="140" y1="102" x2="160" y2="150" class="figure-part" />
+        <!--these are the legs-->
+        <line x1="140" y1="150" x2="110" y2="190" class="figure-part" />
+        <line x1="140" y1="150" x2="170" y2="190" class="figure-part" />
+        </svg>
+        <!--This is the container for all incorrect letters guess-->
+        <div class="incorrect-letters-container">
+        <div id="incorret-letters"></div>
+        </div>
+        <!--this is the container for the selected word-->
+        <div class="word" id="word">
+ 
+        </div>
+
+        <!--This is the popup -->
+        <div class="popup-container" id="popup-container">
+            <div class="popup">
+        <h2 id="final-message"></h2>    
+        <button id="play-btn">Play Again</button>
+        </div>
+        </div>
+
 </div>    
+        <!--This is the notification if user enters a repeat letter-->
+        <div class="notification-container" id="notification-container">
+            <p>It looks like you already guessed this letter . please try another letter. </p>
+      </div>
+
 <script src="script.js"> </script>
 </body>
 </html>
